@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>FOR DEMO</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    {% if items %}
+    <h1>items are</h1>
+    <br />
+    <ol>
+      {% for item in items %}
+      <li>{{item}}</li>
+      {% endfor %}
+    </ol>
+    {% else %}
+    <h1>No Items</h1>
+    {% endif %} 
+    {% for key in profile %}
+    <h5>{{key}}</h5>
+    {% endfor %} 
+    {% for value in profile.values %}
+    <h5>{{value}}</h5>
+    {% endfor %} 
+    {% for key,value in profile.items %}
+    <h5>{{key}}:{{value}}</h5>
+    {% endfor %}
+  </body>
+</html>
